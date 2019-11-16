@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		 <a href="altaAdministrador">Alta Administrador</a>
-	   	 <a href="alta_paciente_admin">Alta Paciente</a>
-	   	 <a href="alta_doctor_admin">Alta Doctor</a>				
+	   	 <a href="altaPaciente">Alta Paciente</a>
+	   	 <a href="altaMedico">Alta Doctor</a>				
 	</body>
 </html>

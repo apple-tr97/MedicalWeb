@@ -9,13 +9,15 @@
 </head>
 <body>
 
-<s:form action="altaPaciente">
+<s:form action="altaPaciente_fin">
 						
 						<h1>Alta Paciente </h1>
-						<s:textfield name="paciente.nombre" label="Nombre:" />
-						<s:textfield name="paciente.apellido" label="Apellido:" />
-						<s:textfield name="paciente.mail" label="Mail:" />
-						<s:textfield name="paciente.password" label="Password:"/>
+						<s:textfield name="paciente.nombre" label="Nombre" />
+						<s:textfield name="paciente.apellido" label="Apellido" />
+						<s:textfield name="paciente.mail" label="Mail" />
+						<s:textfield name="paciente.password" label="Password"/>
+						<s:textfield name="paciente.poliza" label="Poliza"/>
+						<s:textfield name="paciente.ss" label="Seguro Social"/>
 						
 						
 						 <s:submit value="Enviar"/> 

@@ -29,6 +29,12 @@
     	<action name="altaAdministrador">
 	    		<result name="success">/WEB-INF/admin/AltaAdministrador.jsp</result>
 	    	</action>
+	    <action name="altaPaciente">
+	    		<result name="success">/WEB-INF/paciente/AltaPaciente.jsp</result>
+	    	</action>
+	    <action name="altaMedico">
+	    		<result name="success">/WEB-INF/medico/AltaAMedico.jsp</result>
+	    	</action>
     	 <action name="altaAdministrador_fin" class="com.action.AdministradorAction"  method="crearAdmin">
             <result name="success">/WEB-INF/admin/adminRegistrado.jsp</result>
             <result name="error">WEB-INF/error.jsp</result>
