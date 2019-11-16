@@ -9,11 +9,11 @@ public class AdministradorAction extends ActionSupport {
     private int id;
     private AdministradorBean administrador;
 
-    public AdministradorBean getAdmin() {
+    public AdministradorBean getAdministrador() {
         return administrador;
     }
 
-    public void setAdmin(AdministradorBean administrador) {
+    public void setAdministrador(AdministradorBean administrador) {
         this.administrador = administrador;
     }
 
@@ -21,7 +21,9 @@ public class AdministradorAction extends ActionSupport {
         String resultado = "";
         DAOAdministrador daoAdmin = new DAOAdministrador_Impl();
         try {
-            resultado = daoAdmin.registrarAdministrador(administrador);
+        	System.out.println("Usuario: "+getAdministrador());
+            resultado = daoAdmin.registrarAdministrador(getAdministrador());
+            
         } catch (Exception e) {
             resultado = ERROR;
             e.printStackTrace();

@@ -36,17 +36,9 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		ps2.setString(1,administrador.getMail());
 		ps2.setString(2,administrador.getPassword());
 		ps2.setString(3,""+"Administrador");
-		ResultSet rs = ps.executeQuery();
-		ResultSet rs2 = ps2.executeQuery();
-		if(rs.next()) {
-			if(rs.next()) {
-				respuesta = rs.getString(1);
-			}else {
-				respuesta = "error2";
-			}
-		}else {
-			respuesta = "error1";
-		}
+		int rs = ps.executeUpdate();
+		int rs2 = ps2.executeUpdate();
+		respuesta = "success";
 
 		if (conn != null) {
 			try {
