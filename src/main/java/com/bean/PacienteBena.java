@@ -8,7 +8,7 @@ public class PacienteBena {
     private String apellido;
     private String mail;
     private String password;
-    private int poliza;
+    private String poliza;
     private int ss;
 
     public int getId_paciente() {
@@ -50,16 +50,16 @@ public class PacienteBena {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+    public String getPoliza() {
+		return poliza;
+	}
 
-    public int getPoliza() {
-        return poliza;
-    }
+	public void setPoliza(String poliza) {
+		this.poliza = poliza;
+	}
 
-    public void setPoliza(int poliza) {
-        this.poliza = poliza;
-    }
-
-    public int getSs() {
+	public int getSs() {
         return ss;
     }
 

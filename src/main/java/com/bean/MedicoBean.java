@@ -5,10 +5,19 @@ public class MedicoBean {
     private String nombre;
     private String apellido;
     private String cedula;
-    private int equipo;
+    private String equipo;
     private String universidad;
     private String afiliacion;
-    private String mail;
+    private String especialidad;
+    public String getEspecialidad() {
+		return especialidad;
+	}
+
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
+	}
+
+	private String mail;
     private String password;
 
     public int getId_medico() {
@@ -42,16 +51,15 @@ public class MedicoBean {
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
+    public String getEquipo() {
+		return equipo;
+	}
 
-    public int getEquipo() {
-        return equipo;
-    }
+	public void setEquipo(String equipo) {
+		this.equipo = equipo;
+	}
 
-    public void setEquipo(int equipo) {
-        this.equipo = equipo;
-    }
-
-    public String getUniversidad() {
+	public String getUniversidad() {
         return universidad;
     }
 

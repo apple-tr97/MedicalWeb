@@ -8,7 +8,7 @@ import com.bean.UsuarioBean;
 import com.dao.DAOUsuario;
 import com.database.Conexion;
 
-import itesm.business.PacienteBean;
+//import itesm.business.PacienteBean;
 
 
 public class DAOUsuario_Impl extends Conexion implements DAOUsuario{
@@ -44,7 +44,7 @@ public class DAOUsuario_Impl extends Conexion implements DAOUsuario{
       return respuesta;
 	}
 	
-	@Override
+	/*@Override
 	public void insertar(PacienteBean paciente) throws Exception {
 		Connection conn = null;
 	      
@@ -73,6 +73,6 @@ public class DAOUsuario_Impl extends Conexion implements DAOUsuario{
            }
         }
 		
-	}
+	}*/
 	
 }
