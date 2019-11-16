@@ -6,10 +6,10 @@
 	<title>Menu Admin</title>
 	</head>
 	<body>
-		 <a href="alta_administrador_admin">Alta Administrador</a>
-	   	 <a href="alta_paciente_admin">Alta Paciente</a>
-	   	 <a href="alta_doctor_admin">Alta Doctor</a>
-	   	 <a href="consulta_paciente_admin">Consultar Pacientes</a>	
-	   	 <a href="consulta_doctor_admin">Consultar Doctores</a>				
+		 <a href="altaAdministrador">Alta Administrador</a>
+	   	 <a href="altaPaciente">Alta Paciente</a>
+	   	 <a href="altaMedico">Alta Doctor</a>
+	   	 <a href="consulta_pacientes_admin">Consulta Pacientes</a>
+	   	 <a href="consulta_doctores_admin">Consulta Medicos</a>				
 	</body>
 </html>

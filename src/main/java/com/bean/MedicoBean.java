@@ -5,23 +5,11 @@ public class MedicoBean {
     private String nombre;
     private String apellido;
     private String cedula;
-<<<<<<< HEAD
     private String equipo;
-=======
-    private int equipo;
-    private String especialidad;
->>>>>>> f80bb2bd741cf33fe49583b3806e3d68fe11695a
     private String universidad;
     private String afiliacion;
     private String especialidad;
-    public String getEspecialidad() {
-		return especialidad;
-	}
-
-	public void setEspecialidad(String especialidad) {
-		this.especialidad = especialidad;
-	}
-
+    
 	private String mail;
     private String password;
 

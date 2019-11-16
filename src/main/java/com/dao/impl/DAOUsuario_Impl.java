@@ -8,13 +8,6 @@ import com.bean.UsuarioBean;
 import com.dao.DAOUsuario;
 import com.database.Conexion;
 
-<<<<<<< HEAD
-//import itesm.business.PacienteBean;
-=======
-
->>>>>>> f80bb2bd741cf33fe49583b3806e3d68fe11695a
-
-
 public class DAOUsuario_Impl extends Conexion implements DAOUsuario{
 
 	@Override

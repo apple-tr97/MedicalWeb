@@ -26,16 +26,40 @@
         	<result name="error">WEB-INF/error.jsp</result>
     	</action>
     	
-    	
-    	 <action name="consulta_paciente_admin" class="com.action.AdministradorAction" method="consultarPacientes">
-        	<result name="success">WEB-INF/admin/listas/lista_paciente.jsp</result>
-        	<result name="error">WEB-INF/error.jsp</result>
-    	</action>
-    	
-    	 <action name="consulta_doctor_admin" class="com.action.AdministradorAction" method="consultarDoctores">
-        	<result name="success">WEB-INF/admin/listas/lista_doctor.jsp</result>
-        	<result name="error">WEB-INF/error.jsp</result>
-    	</action>
+    	<action name="altaAdministrador">
+	    		<result name="success">/WEB-INF/admin/AltaAdministrador.jsp</result>
+	    	</action>
+	    <action name="altaPaciente">
+	    		<result name="success">/WEB-INF/paciente/AltaPaciente.jsp</result>
+	    	</action>
+	    <action name="altaMedico">
+	    		<result name="success">/WEB-INF/medico/AltaMedico.jsp</result>
+	    	</action>
+    	 <action name="altaAdministrador_fin" class="com.action.AdministradorAction"  method="crearAdmin">
+            <result name="success">/WEB-INF/admin/adminRegistrado.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
+        <action name="altaPaciente_fin" >
+            <result name="success">/WEB-INF/paciente/pacienteRegistrado.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
+        <action name="altaMedico_fin" >
+            <result name="success">/WEB-INF/medico/medicoRegistrado.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
+         <action name="consulta_pacientes_admin" class="com.action.AdministradorAction"  method="consultarPacientes">
+            <result name="success">/WEB-INF/admin/listas/lista_paciente.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+      	
+      	<action name="consulta_doctores_admin" class="com.action.AdministradorAction"  method="consultarDoctores">
+            <result name="success">/WEB-INF/admin/listas/lista_doctor.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
 
     </package>
 

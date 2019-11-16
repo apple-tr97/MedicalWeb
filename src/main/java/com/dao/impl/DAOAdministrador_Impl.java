@@ -72,7 +72,7 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		ps.setString(1,medico.getNombre());
 		ps.setString(2,medico.getApellido());
 		ps.setString(3,medico.getCedula());
-		ps.setInt(4,medico.getEquipo());
+		ps.setString(4,medico.getEquipo());
 		ps.setString(5,medico.getUniversidad());
 		ps.setString(6,medico.getAfiliacion());
 		ps.setString(7,medico.getEspecialidad());
@@ -81,17 +81,10 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		ps2.setString(1,medico.getMail());
 		ps2.setString(2,medico.getPassword());
 		ps2.setString(3,""+"Medico");
-		ResultSet rs = ps.executeQuery();
-		ResultSet rs2 = ps2.executeQuery();
-		if(rs.next()) {
-			if(rs2.next()) {
-				respuesta = rs.getString(1);
-			}else {
-				respuesta = "error2";
-			}
-		}else {
-			respuesta = "error1";
-		}
+		int rs = ps.executeUpdate();
+		int rs2 = ps2.executeUpdate();
+		
+		respuesta = "success";
 
 		if (conn != null) {
 			try {
