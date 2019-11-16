@@ -9,8 +9,8 @@
 	</head>
 	<body>
 		<s:form action="validar_usuario">
-   			<s:textfield label="Username" name="usuario.usuarioID"/>
-  		 		<s:password label="Password" name="usuario.password" />
+   			<s:textfield label="Username" name="email"/>
+  		 		<s:password label="Password" name="password" />
   				<s:submit value="Ingresar"/>
 		</s:form>
 		

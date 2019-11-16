@@ -1,14 +1,13 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html>
 <html>
-<head>
-    <title><s:text name="HelloWorld.message"/></title>
-</head>
-
-<body>
-<h2><s:property value="message"/></h2>
-
-<h3>Menu Admin</h3>
-
-</body>
+	<head>
+	<title>Menu Admin</title>
+	</head>
+	<body>
+		 <a href="alta_administrador_admin">Alta Administrador</a>
+	   	 <a href="alta_paciente_admin">Alta Paciente</a>
+	   	 <a href="alta_doctor_admin">Alta Doctor</a>				
+	</body>
 </html>
