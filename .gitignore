@@ -74,8 +74,10 @@ local.properties
 # End of https://www.gitignore.io/api/eclipse
 
  ./VeterinariaWebApp/target/m2e-wtp/web-resources
+./VeterinariaWebApp/target
 .DS_Store
 /target/
+target
 src/main/java/com/database/Conexion.java
 target/test-classes/com/scrum/hospital/example/LoginTest.class
 target/test-classes/com/scrum/hospital/example/HelloWorldTest.class
@@ -94,3 +96,4 @@ target/classes/com/bean/PacienteBena.class
 target/classes/com/bean/MedicoBean.class
 target/classes/com/bean/AdministradorBean.class
 target/classes/com/action/UsuarioAction.class
+target/classes/com/scrum/hospital/example/Login.class

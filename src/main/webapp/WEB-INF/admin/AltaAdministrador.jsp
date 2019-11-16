@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<s:form action="altaAdministrador_fin">
+<s:form action="altaAdministrador">
 						
 						<h1>Alta Administrador</h1>
 						<s:textfield name="administrador.nombre" label="Nombre:" />
