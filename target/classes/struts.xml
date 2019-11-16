@@ -25,6 +25,23 @@
         	<result name="Medico">WEB-INF/medico/menu_medico.jsp</result>
         	<result name="error">WEB-INF/error.jsp</result>
     	</action>
+    	
+    	 <action name="altaAdministrador" class="com.action.AdministradoAction"  method="">
+            <result name="success">/WEB-INF/admin/adminRegistrado.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
+        <action name="altaPaciente" class="com.action.PacienteAction"  method="">
+            <result name="success">/WEB-INF/paciente/AltaPaciente.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+            
+        </action>
+        
+         <action name="altaDoctor" class="com.action.PacienteAction"  method="">
+            <result name="success">/WEB-INF/medico/AltaDoctor.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
 
     </package>
 
