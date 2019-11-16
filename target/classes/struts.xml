@@ -25,17 +25,6 @@
         	<result name="Medico">WEB-INF/medico/menu_medico.jsp</result>
         	<result name="error">WEB-INF/error.jsp</result>
     	</action>
-    	
-    	<action name="altaAdministrador">
-	    		<result name="success">/WEB-INF/admin/AltaAdministrador.jsp</result>
-	    	</action>
-    	 <action name="altaAdministrador_fin" class="com.action.AdministradorAction"  method="crearAdmin">
-            <result name="success">/WEB-INF/admin/adminRegistrado.jsp</result>
-            <result name="error">WEB-INF/error.jsp</result>
-        </action>
-        
-      
-        
 
     </package>
 

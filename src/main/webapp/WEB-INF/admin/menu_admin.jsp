@@ -6,7 +6,7 @@
 	<title>Menu Admin</title>
 	</head>
 	<body>
-		 <a href="altaAdministrador">Alta Administrador</a>
+		 <a href="alta_administrador_admin">Alta Administrador</a>
 	   	 <a href="alta_paciente_admin">Alta Paciente</a>
 	   	 <a href="alta_doctor_admin">Alta Doctor</a>				
 	</body>
