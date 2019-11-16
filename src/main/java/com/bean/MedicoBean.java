@@ -6,10 +6,19 @@ public class MedicoBean {
     private String apellido;
     private String cedula;
     private int equipo;
+    private String especialidad;
     private String universidad;
     private String afiliacion;
     private String mail;
     private String password;
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
 
     public int getId_medico() {
         return id_medico;

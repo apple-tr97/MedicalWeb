@@ -1,11 +1,12 @@
 package com.dao;
 
 import com.bean.AdministradorBean;
+import com.bean.MedicoBean;
 
 public interface DAOAdministrador {
 	public String registrarAdministrador(AdministradorBean administrador) throws Exception;
-	/*public registrarDoctor()
-	public registrarPaciente();
+	public String registrarDoctor(MedicoBean medico) throws Exception;
+	/*public registrarPaciente();
 	public crearRecetas()*/
 	//crearHistorialMedico()
 	

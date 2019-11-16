@@ -1,6 +1,7 @@
 package com.dao.impl;
 
 import com.bean.AdministradorBean;
+import com.bean.MedicoBean;
 import com.dao.DAOAdministrador;
 import com.database.Conexion;
 
@@ -39,7 +40,7 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		ResultSet rs = ps.executeQuery();
 		ResultSet rs2 = ps2.executeQuery();
 		if(rs.next()) {
-			if(rs.next()) {
+			if(rs2.next()) {
 				respuesta = rs.getString(1);
 			}else {
 				respuesta = "error2";
@@ -57,5 +58,50 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		}
 		return respuesta;
 	}
+
+	@Override
+	public String registrarDoctor(MedicoBean medico) throws Exception {
+		String respuesta = "";
+		Connection conn = null;
+		establishConnection();
+		conn = getCon();
+		String sql = "INSERT INTO Administrador(nombre,apellido,cedula,equipo,universidad,afiliacion,especialidad,mail,password) VALUES(?,?,?,?,?,?,?,?,?)";
+		String sql2 = "INSERT INTO Usuario(email,password,tipo) VALUES(?,?,?)";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		PreparedStatement ps2 = conn.prepareStatement(sql2);
+		ps.setString(1,medico.getNombre());
+		ps.setString(2,medico.getApellido());
+		ps.setString(3,medico.getCedula());
+		ps.setInt(4,medico.getEquipo());
+		ps.setString(5,medico.getUniversidad());
+		ps.setString(6,medico.getAfiliacion());
+		ps.setString(7,medico.getEspecialidad());
+		ps.setString(8,medico.getMail());
+		ps.setString(9,medico.getPassword());
+		ps2.setString(1,medico.getMail());
+		ps2.setString(2,medico.getPassword());
+		ps2.setString(3,""+"Medico");
+		ResultSet rs = ps.executeQuery();
+		ResultSet rs2 = ps2.executeQuery();
+		if(rs.next()) {
+			if(rs2.next()) {
+				respuesta = rs.getString(1);
+			}else {
+				respuesta = "error2";
+			}
+		}else {
+			respuesta = "error1";
+		}
+
+		if (conn != null) {
+			try {
+				closeConnection();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return respuesta;
+	}
+
 
 }
