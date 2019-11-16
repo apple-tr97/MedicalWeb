@@ -17,7 +17,6 @@ public class DAOUsuario_Impl extends Conexion implements DAOUsuario{
 	public String buscarTipoDeUsuario(String email, String password) throws Exception{
 		String respuesta = "";
 		 Connection conn = null;
-		 
     	 establishConnection();
          conn = getCon();
          String sql = "SELECT tipo FROM usuario WHERE";

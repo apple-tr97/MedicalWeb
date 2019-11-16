@@ -3,7 +3,7 @@ package com.dao;
 import com.bean.AdministradorBean;
 
 public interface DAOAdministrador {
-	public void registrarAdministrador(AdministradorBean administrador);
+	public String registrarAdministrador(AdministradorBean administrador) throws Exception;
 	/*public registrarDoctor()
 	public registrarPaciente();
 	public crearRecetas()*/
