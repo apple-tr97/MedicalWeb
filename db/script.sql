@@ -27,6 +27,7 @@ Create table Paciente (
 	poliza Int NOT NULL,
 	mail Varchar(30) NOT NULL,
 	password Varchar(30) NOT NULL,
+	UNIQUE (mail),
  Primary Key (id_paciente)) ENGINE = MyISAM;
 
 Create table Medico (
@@ -41,6 +42,7 @@ Create table Medico (
 	mail Varchar(30) NOT NULL,
 	password Varchar(30) NOT NULL,
 	UNIQUE (cedula),
+	UNIQUE (mail),
  Primary Key (id_doctor)) ENGINE = MyISAM;
 
 Create table Historial_Medico (
@@ -51,6 +53,7 @@ Create table Historial_Medico (
 	tratamiento Varchar(30),
 	analisis_rechazados Varchar(30),
 	resultados Varchar(30),
+	UNIQUE (id_paciente),
  Primary Key (id_historial,id_paciente)) ENGINE = MyISAM;
 
 Create table Receta (
@@ -66,23 +69,21 @@ Create table Administrador (
 	apellido Varchar(30) NOT NULL AUTO_INCREMENT,
 	mail Varchar(30) NOT NULL,
 	password Varchar(30) NOT NULL,
+	UNIQUE (mail),
  Primary Key (id_administrador)) ENGINE = MyISAM;
 
 Create table Consulta (
-	id_consulta Int NOT NULL,
 	id_doctor Int NOT NULL,
-	id_paciente Int NOT NULL,
 	id_receta Int NOT NULL,
- Primary Key (id_consulta,id_doctor,id_paciente,id_receta)) ENGINE = MyISAM;
+	id_paciente Int NOT NULL,
+ Primary Key (id_doctor,id_receta,id_paciente)) ENGINE = MyISAM;
 
 Create table Usuario (
-	id_usuario Int NOT NULL AUTO_INCREMENT,
-	nombre Varchar(30) NOT NULL,
-	apellido Char(30) NOT NULL,
-	tipo Int NOT NULL,
-	correo Varchar(30) NOT NULL,
+	id Int NOT NULL AUTO_INCREMENT,
+	email Varchar(30) NOT NULL,
 	password Varchar(30) NOT NULL,
- Primary Key (id_usuario)) ENGINE = MyISAM;
+	tipo Varchar(30) NOT NULL,
+ Primary Key (id)) ENGINE = MyISAM;
 
 
 Alter table Historial_Medico add Foreign Key (id_paciente) references Paciente (id_paciente) on delete  restrict on update  restrict;
