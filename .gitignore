@@ -75,3 +75,4 @@ local.properties
 
  ./VeterinariaWebApp/target/m2e-wtp/web-resources
 .DS_Store
+/target/

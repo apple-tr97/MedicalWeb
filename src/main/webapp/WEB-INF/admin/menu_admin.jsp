@@ -6,13 +6,8 @@
 	<title>Menu Admin</title>
 	</head>
 	<body>
-
-						<s:url action="goto_crear_admin_jsp" var="goto_crear_admin"/>
-						<s:url action="goto_login_jsp" var="goto_login"/>
-						<s:url action="welcome" var="goto_welcome"/>
-						 <a href="alta_administrador">Alta Administrador</a>
-					   	 <a href="${goto_crear_admin}">Alta Paciente</a>
-					   	 <a href="${goto_crear_admin}">Alta Doctor</a>
-				
+		 <a href="alta_administrador_admin">Alta Administrador</a>
+	   	 <a href="alta_paciente_admin">Alta Paciente</a>
+	   	 <a href="alta_doctor_admin">Alta Doctor</a>				
 	</body>
 </html>
