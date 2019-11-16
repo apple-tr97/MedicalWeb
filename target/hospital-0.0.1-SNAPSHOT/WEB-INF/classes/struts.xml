@@ -21,7 +21,7 @@
         
          <action name="validar_usuario" class="com.action.UsuarioAction" method="validarLoginYRedireccionar">
         	<result name="Administrador">WEB-INF/admin/menu_admin.jsp</result>
-        	<result name="Usuario">WEB-INF/paciente/menu_paciente.jsp</result>
+        	<result name="Paciente">WEB-INF/paciente/menu_paciente.jsp</result>
         	<result name="Medico">WEB-INF/medico/menu_medico.jsp</result>
         	<result name="error">WEB-INF/error.jsp</result>
     	</action>
