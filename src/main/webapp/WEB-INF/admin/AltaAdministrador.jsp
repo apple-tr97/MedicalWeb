@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<s:form action="altaAdministrador">
+<s:form action="altaAdministrador_fin">
 						
 						<h1>Alta Administrador</h1>
 						<s:textfield name="administrador.nombre" label="Nombre:" />
@@ -18,7 +18,7 @@
 						<s:textfield name="administrador.password" label="Password:"/>
 						
 						
-						 <s:submit value="Enviar"/> 
+						 <s:submit value="Enviar"></s:submit>
 					</s:form>
 
 </body>

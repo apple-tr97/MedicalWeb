@@ -2,6 +2,7 @@ package com.dao.impl;
 
 import com.bean.AdministradorBean;
 import com.bean.MedicoBean;
+import com.bean.PacienteBena;
 import com.dao.DAOAdministrador;
 import com.database.Conexion;
 
@@ -27,27 +28,20 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		establishConnection();
 		conn = getCon();
 		String sql = "INSERT INTO Administrador(nombre,apellido,mail,password) VALUES(?,?,?,?)";
-		String sql2 = "INSERT INTO Usuario(email,password,tipo) VALUES(?,?,?)";
 		PreparedStatement ps = conn.prepareStatement(sql);
-		PreparedStatement ps2 = conn.prepareStatement(sql2);
 		ps.setString(1,administrador.getNombre());
 		ps.setString(2,administrador.getApellido());
 		ps.setString(3,administrador.getMail());
 		ps.setString(4,administrador.getPassword());
-		ps2.setString(1,administrador.getMail());
-		ps2.setString(2,administrador.getPassword());
-		ps2.setString(3,""+"Administrador");
-		ResultSet rs = ps.executeQuery();
-		ResultSet rs2 = ps2.executeQuery();
-		if(rs.next()) {
-			if(rs2.next()) {
-				respuesta = rs.getString(1);
-			}else {
-				respuesta = "error2";
-			}
-		}else {
-			respuesta = "error1";
-		}
+		int rs = ps.executeUpdate();
+        String sql2 = "INSERT INTO Usuario(email,password,tipo) VALUES(?,?,?)";
+        PreparedStatement ps2 = conn.prepareStatement(sql2);
+        ps2.setString(1,administrador.getMail());
+        ps2.setString(2,administrador.getPassword());
+        ps2.setString(3,""+"Administrador");
+		int rs2 = ps2.executeUpdate();
+		System.out.println("rs: "+rs);
+		respuesta = "success";
 
 		if (conn != null) {
 			try {
@@ -65,7 +59,7 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		Connection conn = null;
 		establishConnection();
 		conn = getCon();
-		String sql = "INSERT INTO Administrador(nombre,apellido,cedula,equipo,universidad,afiliacion,especialidad,mail,password) VALUES(?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO Medico(nombre,apellido,cedula,equipo,universidad,afiliacion,especialidad,mail,password) VALUES(?,?,?,?,?,?,?,?,?)";
 		String sql2 = "INSERT INTO Usuario(email,password,tipo) VALUES(?,?,?)";
 		PreparedStatement ps = conn.prepareStatement(sql);
 		PreparedStatement ps2 = conn.prepareStatement(sql2);
@@ -95,6 +89,40 @@ public class DAOAdministrador_Impl extends Conexion implements DAOAdministrador{
 		}
 		return respuesta;
 	}
+
+    @Override
+    public String registrarPaciente(PacienteBena paciente) throws Exception {
+        String respuesta = "";
+        Connection conn = null;
+        establishConnection();
+        conn = getCon();
+        String sql = "INSERT INTO Paciente(nombre,apellido,id_ss,poliza,mail,password) VALUES(?,?,?,?,?,?)";
+        String sql2 = "INSERT INTO Usuario(email,password,tipo) VALUES(?,?,?)";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        PreparedStatement ps2 = conn.prepareStatement(sql2);
+        ps.setString(1,paciente.getNombre());
+        ps.setString(2,paciente.getApellido());
+        ps.setString(3,paciente.getSs());
+        ps.setString(4,paciente.getPoliza());
+        ps.setString(5,paciente.getMail());
+        ps.setString(6,paciente.getPassword());
+        ps2.setString(1,paciente.getMail());
+        ps2.setString(2,paciente.getPassword());
+        ps2.setString(3,""+"Paciente");
+        int rs = ps.executeUpdate();
+        int rs2 = ps2.executeUpdate();
+
+        respuesta = "success";
+
+        if (conn != null) {
+            try {
+                closeConnection();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return respuesta;
+    }
 
 
 }

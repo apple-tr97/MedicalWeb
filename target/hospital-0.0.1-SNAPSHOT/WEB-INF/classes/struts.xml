@@ -4,7 +4,7 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
-    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.devMode" value="false"/>
 
     <include file="example.xml"/>
 
@@ -25,6 +25,41 @@
         	<result name="Medico">WEB-INF/medico/menu_medico.jsp</result>
         	<result name="error">WEB-INF/error.jsp</result>
     	</action>
+    	
+    	<action name="altaAdministrador">
+	    		<result name="success">/WEB-INF/admin/AltaAdministrador.jsp</result>
+	    	</action>
+	    <action name="altaPaciente">
+	    		<result name="success">/WEB-INF/paciente/AltaPaciente.jsp</result>
+	    	</action>
+	    <action name="altaMedico">
+	    		<result name="success">/WEB-INF/medico/AltaMedico.jsp</result>
+	    	</action>
+    	 <action name="altaAdministrador_fin" class="com.action.AdministradorAction"  method="crearAdmin">
+            <result name="success">/WEB-INF/admin/adminRegistrado.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
+        <action name="altaPaciente_fin"  class="com.action.AdministradorAction" method="crearPaciente">
+            <result name="success">/WEB-INF/paciente/pacienteRegistrado.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
+        <action name="altaMedico_fin" class="com.action.AdministradorAction"  method="crearMedico">
+            <result name="success">/WEB-INF/medico/medicoRegistrado.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
+         <action name="consulta_pacientes_admin" class="com.action.AdministradorAction"  method="consultarPacientes">
+            <result name="success">/WEB-INF/admin/listas/lista_paciente.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+      	
+      	<action name="consulta_doctores_admin" class="com.action.AdministradorAction"  method="consultarDoctores">
+            <result name="success">/WEB-INF/admin/listas/lista_doctor.jsp</result>
+            <result name="error">WEB-INF/error.jsp</result>
+        </action>
+        
 
     </package>
 

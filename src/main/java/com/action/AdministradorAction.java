@@ -19,10 +19,19 @@ import com.opensymphony.xwork2.ActionSupport;
 public class AdministradorAction extends ActionSupport{
     private int id;
     private AdministradorBean administrador;
+    private PacienteBena paciente;
     private MedicoBean medico;
 	private ArrayList<PacienteBena> buffer_pacientes;
 	private ArrayList<MedicoBean> buffer_medicos;
-	
+
+	public PacienteBena getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(PacienteBena paciente) {
+		this.paciente = paciente;
+	}
+
 	public ArrayList<PacienteBena> getBuffer_pacientes() {
 		return buffer_pacientes;
 	}
@@ -37,6 +46,14 @@ public class AdministradorAction extends ActionSupport{
 
 	public void setBuffer_medicos(ArrayList<MedicoBean> buffer_medicos) {
 		this.buffer_medicos = buffer_medicos;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public AdministradorBean getAdministrador() {
@@ -83,17 +100,34 @@ public class AdministradorAction extends ActionSupport{
 		public String init() { return "success";}
         
         public String crearAdmin() {
-        	
+        	System.out.println("Entro a crear");
             String resultado = "";
             DAOAdministrador daoAdmin = new DAOAdministrador_Impl();
             try {
+            	System.out.println("Entro en el try");
                 resultado = daoAdmin.registrarAdministrador(administrador);
+                System.out.println("resultado: "+resultado);
             } catch (Exception e) {
                 resultado = ERROR;
                 e.printStackTrace();
             }
             return resultado;
         }
+
+	public String crearPaciente() {
+		System.out.println("Entro a crear");
+		String resultado = "";
+		DAOAdministrador daoAdmin = new DAOAdministrador_Impl();
+		try {
+			System.out.println("Entro en el try");
+			resultado = daoAdmin.registrarPaciente(paciente);
+			System.out.println("resultado: "+resultado);
+		} catch (Exception e) {
+			resultado = ERROR;
+			e.printStackTrace();
+		}
+		return resultado;
+	}
     
         public String crearMedico() {
             String resultado = "";

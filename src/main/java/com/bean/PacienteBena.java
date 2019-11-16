@@ -9,7 +9,7 @@ public class PacienteBena {
     private String mail;
     private String password;
     private String poliza;
-    private int ss;
+    private String ss;
 
     public int getId_paciente() {
         return id_paciente;
@@ -59,11 +59,11 @@ public class PacienteBena {
 		this.poliza = poliza;
 	}
 
-	public int getSs() {
+	public String  getSs() {
         return ss;
     }
 
-    public void setSs(int ss) {
+    public void setSs(String  ss) {
         this.ss = ss;
     }
 }

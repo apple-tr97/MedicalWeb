@@ -29,7 +29,7 @@ public class DAOPaciente_Impl extends Conexion implements DAOPaciente{
 	        	 pacienteAux.setId_paciente(Integer.parseInt(rs.getString(1)));
 	        	 pacienteAux.setNombre(rs.getString(2));
 	        	 pacienteAux.setApellido(rs.getString(3));	            
-	        	 pacienteAux.setSs(Integer.parseInt(rs.getString(4)));
+	        	 pacienteAux.setSs(rs.getString(4));
 	        	 pacienteAux.setPoliza(rs.getString(5));
 	        	 pacienteAux.setMail(rs.getString(6));
 	        	 pacienteAux.setPassword(rs.getString(7));

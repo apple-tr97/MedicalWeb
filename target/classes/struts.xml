@@ -4,7 +4,7 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
-    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.devMode" value="false"/>
 
     <include file="example.xml"/>
 
@@ -40,12 +40,12 @@
             <result name="error">WEB-INF/error.jsp</result>
         </action>
         
-        <action name="altaPaciente_fin" >
+        <action name="altaPaciente_fin"  class="com.action.AdministradorAction" method="crearPaciente">
             <result name="success">/WEB-INF/paciente/pacienteRegistrado.jsp</result>
             <result name="error">WEB-INF/error.jsp</result>
         </action>
         
-        <action name="altaMedico_fin" >
+        <action name="altaMedico_fin" class="com.action.AdministradorAction"  method="crearMedico">
             <result name="success">/WEB-INF/medico/medicoRegistrado.jsp</result>
             <result name="error">WEB-INF/error.jsp</result>
         </action>

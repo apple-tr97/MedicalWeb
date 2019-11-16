@@ -10,7 +10,7 @@ public class Conexion {
 	private int noCon;
 	private String estatus = null;
 	private Connection con = null;
-	private String connectionUrl = "jdbc:mysql://localhost/hospital_scrum?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	private String connectionUrl = "jdbc:mysql://localhost/hospital?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	private String username = "root";
 	private String password = "";
 	

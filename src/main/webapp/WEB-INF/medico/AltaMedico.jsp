@@ -18,6 +18,7 @@
 						<s:textfield name="medico.password" label="Password"/>
 						<s:textfield name="medico.cedula" label="Cedula"/>
 						<s:textfield name="medico.equipo" label="Equipo"/>
+						<s:textfield name="medico.especialidad" label="Especialidad"/>
 						<s:textfield name="medico.universidad" label="Universidad"/>
 						<s:textfield name="medico.afiliacion" label="Afiliacion"/>
 						
